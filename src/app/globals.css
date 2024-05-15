@@ -19,7 +19,7 @@
   --color-background: var(--color-preto);
   --color: var(--color-branco);
   --color-shadow: var(--color-blackS);
-  --color-contrast: var(--color-blackT);
+  --color-contrast: var(--color-whiteT);
 
   --color-gradient: linear-gradient(135deg, var(--color-vermelho), var(--color-azul-aço)); 
 }

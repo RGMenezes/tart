@@ -3,14 +3,14 @@
   --color-background: var(--color-preto);
   --color: var(--color-branco);
   --color-shadow: var(--color-blackS);
-  --color-contrast: var(--color-blackT);
+  --color-contrast: var(--color-whiteT);
 }
 .theme_white{
   --color-main: var(--color-azul-aço);
   --color-background: var(--color-branco);
   --color: var(--color-preto);
   --color-shadow: var(--color-whiteS);
-  --color-contrast: var(--color-whiteT);
+  --color-contrast: var(--color-blackT);
 }
 
 .body{

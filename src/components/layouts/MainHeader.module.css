@@ -8,6 +8,7 @@
   grid-template-columns: 34px 1fr 34px;
   justify-items: center;
   align-items: center;
+  gap: 20px;
 
   background-color: var(--color-shadow);
   backdrop-filter: blur(3px);
@@ -26,4 +27,10 @@
   flex-flow: row nowrap;
   gap: 15px;
   list-style: none;
+}
+
+@media screen and (min-width: 769px) {
+  .list_container{
+    justify-self: flex-end;
+  }
 }

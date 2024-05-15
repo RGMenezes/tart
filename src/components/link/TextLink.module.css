@@ -1,4 +1,5 @@
 .link{
+  display: block;
   transition: all .3s ease;
 }
 
@@ -10,4 +11,10 @@
 .strong{
   font-weight: 600;
   text-decoration: none;
+}
+
+@media screen and (min-width: 769px) {
+  .link:hover{
+    transform: translate(0px, -3px);
+  }
 }
