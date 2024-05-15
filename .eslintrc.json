@@ -1,3 +1,19 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "camelcase": "error",
+    "indent": [
+      "error",
+      2
+    ],
+    "no-duplicate-imports": "error"
+  }
 }
