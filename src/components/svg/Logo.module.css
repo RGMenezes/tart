@@ -1,0 +1,4 @@
+.svg{
+  fill: var(--color);
+  transition: all .3s ease;
+}

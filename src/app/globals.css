@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --font: 'Roboto', sans-serif;
+
+  --color-metal-de-bronze: #0D2230;
+  --color-cadete-cinza: #87929C;
+  --color-vermelho: #DF322C;
+  --color-azul-aço: #4A86B9;
+  --color-preto: #000000;
+  --color-branco: #ffffff;
+
+  --color-blackS: rgba(0, 0, 0, 0.5);
+  --color-whiteS: rgba(255, 255, 255, 0.5);
+  --color-blackT: rgba(0, 0, 0, 0.1);
+  --color-whiteT: rgba(255, 255, 255, 0.1);
+
+  --color-main: var(--color-vermelho);
+  --color-background: var(--color-preto);
+  --color: var(--color-branco);
+  --color-shadow: var(--color-blackS);
+  --color-contrast: var(--color-blackT);
+
+  --color-gradient: linear-gradient(135deg, var(--color-vermelho), var(--color-azul-aço)); 
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: var(--font);
+}

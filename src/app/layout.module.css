@@ -1,0 +1,21 @@
+.theme_black{
+  --color-main: var(--color-vermelho);
+  --color-background: var(--color-preto);
+  --color: var(--color-branco);
+  --color-shadow: var(--color-blackS);
+  --color-contrast: var(--color-blackT);
+}
+.theme_white{
+  --color-main: var(--color-azul-aço);
+  --color-background: var(--color-branco);
+  --color: var(--color-preto);
+  --color-shadow: var(--color-whiteS);
+  --color-contrast: var(--color-whiteT);
+}
+
+.body{
+  background-color: var(--color-background);
+}
+.body *{
+  color: var(--color);
+};

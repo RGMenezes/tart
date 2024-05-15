@@ -1,0 +1,15 @@
+.button{
+  width: fit-content;
+  height: fit-content;
+  
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  transition: all .3s ease;
+}
+
+.button:active{
+  transform: translate(3px, 3px);
+  transition: all .1s ease;
+}

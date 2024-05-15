@@ -1,0 +1,13 @@
+.link{
+  transition: all .3s ease;
+}
+
+.link:active{
+  color: var(--color-main);
+  transition: all .1s ease;
+}
+
+.strong{
+  font-weight: 600;
+  text-decoration: none;
+}

@@ -1,0 +1,29 @@
+.header{
+  position: fixed;
+  padding: 13px;
+  height: 60px;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 34px 1fr 34px;
+  justify-items: center;
+  align-items: center;
+
+  background-color: var(--color-shadow);
+  backdrop-filter: blur(3px);
+}
+
+.logo{
+  height: 31px;
+  width: fit-content;
+}
+.icon{
+  font-size: 31px;
+}
+
+.list_container{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+  list-style: none;
+}
