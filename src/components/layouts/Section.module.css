@@ -1,0 +1,7 @@
+.container{
+  padding: 50px 30px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+}
