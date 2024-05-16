@@ -16,8 +16,10 @@ export default function HighlightCard(
   const handleImage = () => router.push(to);
 
   useEffect(() => {
-    window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
-    return () => window.removeEventListener('resize', () => setWindowWidth(window.innerWidth));
+    if(window){
+      window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
+      return () => window.removeEventListener('resize', () => setWindowWidth(window.innerWidth));
+    };
   }, []);
 
   return(
