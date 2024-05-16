@@ -10,7 +10,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [theme, setTheme] = useState('theme_black');
+  const [theme, setTheme] = useState(document.cookie.split(' ')?.[2] ?? 'theme_black');
+  console.log(theme);
   return (
     <html lang="pt-br">
       <body suppressHydrationWarning={true} className={`${styles.body} ${styles[theme]}`}>
