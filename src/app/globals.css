@@ -30,3 +30,11 @@
   box-sizing: border-box;
   font-family: var(--font);
 }
+
+*:focus-visible{
+  outline: none;
+  border: none;
+
+  transform: translate(0px, -5px);
+  transition: all .3s ease;
+}
