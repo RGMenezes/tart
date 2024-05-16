@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const [theme, setTheme] = useState('');
-  useEffect(() => setTheme(typeof document !== 'undefined' && document?.cookie !== '' ? document.cookie : 'theme_black'), []);
+  useEffect(() => setTheme(typeof document !== 'undefined' && document?.cookie === 'theme_white' ? document.cookie : 'theme_black'), []);
   return (
     <html lang="pt-br">
       <body suppressHydrationWarning={true} className={`${styles.body} ${styles[theme]}`}>

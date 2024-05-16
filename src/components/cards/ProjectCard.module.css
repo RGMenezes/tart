@@ -1,0 +1,26 @@
+.container{
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.image{
+  width: 100%;
+  height: fit-content;
+
+  box-shadow: 0px 0px 10px var(--color-blackS);
+  border-radius: 5px;
+}
+
+.children_container{
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+
+  text-align: center;
+}

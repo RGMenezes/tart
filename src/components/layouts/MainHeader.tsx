@@ -11,8 +11,8 @@ import IconLink from '../link/IconLink';
 export default function MainHeader({theme, setTheme}: {theme: string, setTheme: Dispatch<SetStateAction<string>>}){
   const handleTheme = () => {
     const newTheme = theme === 'theme_black' ? 'theme_white' : 'theme_black';
-    setTheme(newTheme);
     document.cookie = newTheme;
+    setTheme(newTheme);
   };
   return(
     <header className={styles.header}>
