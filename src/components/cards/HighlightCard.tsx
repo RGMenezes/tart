@@ -10,7 +10,7 @@ export default function HighlightCard(
   {imagePortrait, imageLandscap, alt, to}: 
   {imagePortrait: StaticImageData, imageLandscap: StaticImageData, alt: string, to: string}
 ){
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth ?? 0);
   const router = useRouter();
 
   const handleImage = () => router.push(to);
