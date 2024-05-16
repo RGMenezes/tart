@@ -10,15 +10,17 @@ export default function HighlightCard(
   {imagePortrait, imageLandscap, alt, to}: 
   {imagePortrait: StaticImageData, imageLandscap: StaticImageData, alt: string, to: string}
 ){
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth ?? 0);
+  const [windowWidth, setWindowWidth] = useState(0);
   const router = useRouter();
 
   const handleImage = () => router.push(to);
 
   useEffect(() => {
-    if(window){
-      window.addEventListener('resize', () => setWindowWidth(window.innerWidth));
-      return () => window.removeEventListener('resize', () => setWindowWidth(window.innerWidth));
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    if(typeof window !== 'undefined'){
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
     };
   }, []);
 
