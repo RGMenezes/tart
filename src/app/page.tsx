@@ -7,7 +7,6 @@ import imageYSLandscap from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_l
 import Section from '@/components/layouts/Section';
 import ProjectCard from '@/components/cards/ProjectCard';
 import TextLink from '@/components/link/TextLink';
-import { BsPlus } from 'react-icons/bs';
 
 export default function Home(){
   return(
@@ -46,8 +45,6 @@ export default function Home(){
           </p>
           <TextLink type='highlight' to='/projetos/yakuwariSekai'>Ver mais +</TextLink>
         </ProjectCard>
-
-        
       </Section>
     </main>
   );
