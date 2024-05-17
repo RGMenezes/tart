@@ -55,3 +55,18 @@ p{
   font-size: 1em;
   font-weight: 400;
 }
+
+/* @media screen and (min-width: 769px) {
+  h1{
+    font-size: 2.4em;
+  }
+  h2{
+    font-size: 2.1em;
+  }
+  h3{
+    font-size: 1.8em;
+  }
+  p{
+    font-size: 1.15em;
+  }
+} */

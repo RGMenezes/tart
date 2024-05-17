@@ -2,8 +2,8 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './AdContainer.module.css';
 
 export default function AdContainer(
-  {children, image, className, positionReverse, alt}: 
-  {children?: React.ReactNode, image?: StaticImageData, className?: string, positionReverse?: boolean, alt?: string}
+  {children, image, className, alt}: 
+  {children?: React.ReactNode, image?: StaticImageData, className?: string, alt?: string}
 ){
   return(
     <section className={`${className} ${styles.ad_container}`}>
