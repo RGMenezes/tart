@@ -13,6 +13,16 @@
   text-decoration: none;
 }
 
+.highlight{
+  color: var(--color-main);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.highlight:active{
+  color: var(--color);
+}
+
 @media screen and (min-width: 769px) {
   .link:hover{
     transform: translate(0px, -3px);

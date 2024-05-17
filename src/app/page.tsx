@@ -6,6 +6,8 @@ import imageYSPortrait from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_p
 import imageYSLandscap from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_landscap.jpg';
 import Section from '@/components/layouts/Section';
 import ProjectCard from '@/components/cards/ProjectCard';
+import TextLink from '@/components/link/TextLink';
+import { BsPlus } from 'react-icons/bs';
 
 export default function Home(){
   return(
@@ -25,9 +27,27 @@ export default function Home(){
           imageLandscap={imageYSLandscap}
           alt='Imagem do projeto yakuwari sekai.'
         >
-          <h1>Yakuwari Sekai</h1>
-          <p>Yakuwari Sekai é uma plataforma online onde os amantes de RPGs Narrados se encontram para desfrutar de épicas e enigmáticas aventuras.</p>
+          <h3>Yakuwari Sekai</h3>
+          <p className={styles.project_paragraph}>
+            Yakuwari Sekai é uma plataforma online onde os amantes de RPGs Narrados se encontram para desfrutar de épicas e enigmáticas aventuras.
+          </p>
+          <TextLink type='highlight' to='/projetos/yakuwariSekai'>Ver mais +</TextLink>
         </ProjectCard>
+
+        <ProjectCard 
+          imagePortrait={imageYSPortrait}
+          imageLandscap={imageYSLandscap}
+          alt='Imagem do projeto yakuwari sekai.'
+          left={false}
+        >
+          <h3>Yakuwari Sekai</h3>
+          <p className={styles.project_paragraph}>
+            Yakuwari Sekai é uma plataforma online onde os amantes de RPGs Narrados se encontram para desfrutar de épicas e enigmáticas aventuras.
+          </p>
+          <TextLink type='highlight' to='/projetos/yakuwariSekai'>Ver mais +</TextLink>
+        </ProjectCard>
+
+        
       </Section>
     </main>
   );

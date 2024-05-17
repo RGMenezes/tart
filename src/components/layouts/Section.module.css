@@ -5,3 +5,10 @@
   flex-flow: column nowrap;
   gap: 30px;
 }
+
+@media screen and (min-width: 769px) {
+  .container{
+    padding: 100px 60px;
+    gap: 60px;
+  }
+}

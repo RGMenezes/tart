@@ -2,3 +2,11 @@
   text-align: center;
   padding-bottom: 10px;
 }
+
+.project_paragraph{
+  font-size: .9em;
+}
+
+.icon{
+  fill: var(--color-main);
+}

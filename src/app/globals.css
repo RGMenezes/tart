@@ -38,3 +38,20 @@
   transform: translate(0px, -5px);
   transition: all .3s ease;
 }
+
+h1{
+  font-size: 2em;
+  font-weight: 700;
+}
+h2{
+  font-size: 1.6em;
+  font-weight: 600;
+}
+h3{
+  font-size: 1.35em;
+  font-weight: 600;
+}
+p{
+  font-size: 1em;
+  font-weight: 400;
+}
