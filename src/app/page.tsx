@@ -8,7 +8,7 @@ import imageAd from '@public/assets/tart/home_page.png';
 import Section from '@/components/layouts/Section';
 import ProjectCard from '@/components/cards/ProjectCard';
 import TextLink from '@/components/link/TextLink';
-import AdContainer from '@/components/containers/AdContainer';
+import AdvertisementContainer from '@/components/containers/AdvertisementContainer';
 import ButtonLink from '@/components/link/ButtonLink';
 import { BsArrowRight } from 'react-icons/bs';
 
@@ -63,7 +63,7 @@ export default function Home(){
         </ProjectCard>
       </Section>
 
-      <AdContainer className={styles.ad_container} image={imageAd} alt='Jovem'>
+      <AdvertisementContainer className={styles.ad_container} image={imageAd} alt='Jovem'>
         <h2>Desperte Novas Possibilidades!</h2>
         <p>
           <strong>
@@ -71,7 +71,7 @@ export default function Home(){
           </strong>
         </p>
         <ButtonLink to='/contato'>Começar agora <BsArrowRight /></ButtonLink>
-      </AdContainer>
+      </AdvertisementContainer>
     </main>
   );
 };
