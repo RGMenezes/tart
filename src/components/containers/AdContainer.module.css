@@ -1,4 +1,4 @@
-.ad_container{
+.container{
   padding: 50px 30px;
 
   display: flex;
@@ -21,7 +21,7 @@
 }
 
 @media screen and (min-width: 769px) {
-  .ad_container{
+  .container{
     padding: 100px 60px;
 
     flex-flow: row nowrap;
