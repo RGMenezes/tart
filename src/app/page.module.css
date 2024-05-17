@@ -12,6 +12,6 @@
 }
 
 .ad_container{
-  padding-bottom: 0px !important;
+  /* padding-bottom: 0px !important; */
   background-image: var(--color-gradient);
 }
