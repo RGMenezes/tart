@@ -10,3 +10,7 @@
 .icon{
   fill: var(--color-main);
 }
+
+.ad_container{
+  background-image: var(--color-gradient);
+}

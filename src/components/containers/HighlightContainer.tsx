@@ -2,11 +2,11 @@
 
 import Image, { StaticImageData } from 'next/image';
 
-import styles from './HighlightCard.module.css';
+import styles from './HighlightContainer.module.css';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-export default function HighlightCard(
+export default function HighlightContainer(
   {imagePortrait, imageLandscap, alt, to}: 
   {imagePortrait: StaticImageData, imageLandscap: StaticImageData, alt: string, to: string}
 ){
