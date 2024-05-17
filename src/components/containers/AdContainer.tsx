@@ -6,7 +6,7 @@ export default function AdContainer(
   {children?: React.ReactNode, image?: StaticImageData, className?: string, positionReverse?: boolean, alt?: string}
 ){
   return(
-    <section className={`${styles.container} ${className}`}>
+    <section className={`${className} ${styles.ad_container}`}>
       <article className={styles.children_container}>{children}</article>
       {(image && alt) && <Image className={styles.image} src={image} alt={alt}/>}
     </section>
