@@ -55,6 +55,9 @@ p{
   font-size: 1em;
   font-weight: 400;
 }
+.p_small{
+  font-size: .9em;
+}
 
 /* @media screen and (min-width: 769px) {
   h1{

@@ -1,5 +1,9 @@
 .link{
-  display: block;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+  align-items: center;
+  
   color: var(--color);
   transition: all .3s ease;
 }

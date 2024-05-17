@@ -18,7 +18,8 @@
 }
 
 .highlight{
-  color: var(--color-main);
+  background-color: var(--color-main);
+  color: var(--color);
   font-weight: 600;
 }
 

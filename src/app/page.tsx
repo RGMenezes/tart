@@ -10,7 +10,11 @@ import ProjectCard from '@/components/cards/ProjectCard';
 import TextLink from '@/components/link/TextLink';
 import AdvertisementContainer from '@/components/containers/AdvertisementContainer';
 import ButtonLink from '@/components/link/ButtonLink';
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight, BsGraphUpArrow, BsLaptop, BsTools } from 'react-icons/bs';
+import Card from '@/components/cards/Card';
+import adText from '@/texts/adText';
+import projectText from '@/texts/projectText';
+import serviceText from '@/texts/serviceText';
 
 export default function Home(){
   return(
@@ -30,11 +34,9 @@ export default function Home(){
           imageLandscap={imageYSLandscap}
           alt='Imagem do projeto yakuwari sekai.'
         >
-          <h3>Yakuwari Sekai</h3>
-          <p className={styles.project_paragraph}>
-            Yakuwari Sekai é uma plataforma online onde os amantes de RPGs Narrados se encontram para desfrutar de épicas e enigmáticas aventuras.
-          </p>
-          <TextLink type='highlight' to='/projetos/yakuwariSekai'>Ver mais +</TextLink>
+          <h3>{projectText.yakuwariSekai.title}</h3>
+          <p className='p_small'>{projectText.yakuwariSekai.paragraph}</p>
+          <TextLink type='highlight' to='/projetos/yakuwariSekai'>{projectText.yakuwariSekai.cta}</TextLink>
         </ProjectCard>
 
         <ProjectCard 
@@ -43,11 +45,9 @@ export default function Home(){
           alt='Imagem do projeto yakuwari sekai.'
           left={false}
         >
-          <h3>Yakuwari Sekai</h3>
-          <p className={styles.project_paragraph}>
-            Yakuwari Sekai é uma plataforma online onde os amantes de RPGs Narrados se encontram para desfrutar de épicas e enigmáticas aventuras.
-          </p>
-          <TextLink type='highlight' to='/projetos/yakuwariSekai'>Ver mais +</TextLink>
+          <h3>{projectText.yakuwariSekai.title}</h3>
+          <p className='p_small'>{projectText.yakuwariSekai.paragraph}</p>
+          <TextLink type='highlight' to='/projetos/yakuwariSekai'>{projectText.yakuwariSekai.cta}</TextLink>
         </ProjectCard>
 
         <ProjectCard 
@@ -55,23 +55,48 @@ export default function Home(){
           imageLandscap={imageYSLandscap}
           alt='Imagem do projeto yakuwari sekai.'
         >
-          <h3>Yakuwari Sekai</h3>
-          <p className={styles.project_paragraph}>
-            Yakuwari Sekai é uma plataforma online onde os amantes de RPGs Narrados se encontram para desfrutar de épicas e enigmáticas aventuras.
-          </p>
-          <TextLink type='highlight' to='/projetos/yakuwariSekai'>Ver mais +</TextLink>
+          <h3>{projectText.yakuwariSekai.title}</h3>
+          <p className='p_small'>{projectText.yakuwariSekai.paragraph}</p>
+          <TextLink type='highlight' to='/projetos/yakuwariSekai'>{projectText.yakuwariSekai.cta}</TextLink>
         </ProjectCard>
       </Section>
 
       <AdvertisementContainer className={styles.ad_container} image={imageAd} alt='Jovem'>
-        <h2>Desperte Novas Possibilidades!</h2>
-        <p>
-          <strong>
-            Explore novas oportunidades e leve seu negócio para o próximo nível. Estamos aqui para transformar suas ideias em realidade e impulsionar seu sucesso online. Entre em contato conosco agora para descobrir como podemos fazer a diferença para você e começar a criar juntos!
-          </strong>
-        </p>
-        <ButtonLink to='/contato'>Começar agora <BsArrowRight /></ButtonLink>
+        <h2>{adText.home.title}</h2>
+        <p><strong>{adText.home.paragraph}</strong></p>
+        <ButtonLink to='/contato'>{adText.home.cta}<BsArrowRight /></ButtonLink>
       </AdvertisementContainer>
+
+      <Section className={`${styles.container} ${styles.cotainer_flex_row_center}`}>
+        <h1>Serviços</h1>
+
+        <div className={styles.service_container}>
+          <Card>
+            <BsLaptop className={styles.service_icon}/>
+            <h3>{serviceText.rent.title}</h3>
+            <p className='p_small'>{serviceText.rent.paragraph}</p>
+            <TextLink className={styles.service_link} type='highlight' to='/contato'>{serviceText.rent.cta} <BsArrowRight /></TextLink>
+          </Card>
+
+          <Card>
+            <BsGraphUpArrow className={styles.service_icon}/>
+            <h3>{serviceText.analysis.title}</h3>
+            <p className='p_small'>{serviceText.analysis.paragraph}</p>
+            <TextLink className={styles.service_link} type='highlight' to='/contato'>{serviceText.analysis.cta} <BsArrowRight /></TextLink>
+          </Card>
+
+          <Card>
+            <BsTools className={styles.service_icon}/>
+            <h3>{serviceText.others.title}</h3>
+            <p className='p_small'>{serviceText.others.paragraph}</p>
+            <TextLink className={styles.service_link} type='highlight' to='/contato'>{serviceText.others.cta} <BsArrowRight /></TextLink>
+          </Card>
+        </div>
+      </Section>
+
+      <Section className={styles.assessment_container}>
+        <ButtonLink type='highlight' to='/contato'>Junte-se agora <BsArrowRight /></ButtonLink>
+      </Section>
     </main>
   );
 };
