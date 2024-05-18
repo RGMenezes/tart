@@ -4,6 +4,7 @@ import MainHeader from '@/components/layouts/MainHeader';
 import './globals.css';
 import styles from './layout.module.css';
 import { useEffect, useState } from 'react';
+import Footer from '@/components/layouts/Footer';
 
 export default function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body suppressHydrationWarning={true} className={`${styles.body} ${styles[theme]}`}>
         <MainHeader theme={theme} setTheme={setTheme}/>
         {children}
+        <Footer />
       </body>
     </html>
   );

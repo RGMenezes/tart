@@ -1,0 +1,109 @@
+.ad_section{
+  overflow: hidden;
+}
+
+@keyframes identifier {
+  0%{
+    transform: translate(-120%, 0);
+  }
+  100%{
+    transform: translate(100vw, 0);
+  }
+}
+
+.ad_section{
+  padding: 15px 0px;
+  width: 100%;
+  
+  overflow: hidden;
+  position: relative;
+  
+  background-image: var(--color-gradient);
+}
+
+.ad_text{
+  display: block;
+  width: fit-content;
+  
+  font-weight: 600;
+  transform: translate(-120%, 0);
+  animation: identifier 10s linear infinite;
+}
+.ad_text1{
+  position: absolute;
+  top: 15px;
+  left: 0;
+  animation-delay: 2s;
+}
+.ad_text2{
+  position: absolute;
+  top: 15px;
+  left: 0;
+  animation-delay: 4s;
+}
+.ad_text3{
+  position: absolute;
+  top: 15px;
+  left: 0;
+  animation-delay: 6s;
+}
+.ad_text4{
+  position: absolute;
+  top: 15px;
+  left: 0;
+  animation-delay: 8s;
+}
+
+.content_container{
+  align-items: center;
+  gap: 50px !important;
+}
+.content_container > p{
+  text-align: center;
+}
+
+.center_container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.logo{
+  height: 80px;
+}
+
+.list_container{
+  width: 100%;
+  max-width: 1000px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-self: center;
+  gap: 15px;
+}
+.list_container li{
+  list-style: none;
+}
+
+@media screen and (min-width: 769px) {
+  .ad_text{
+    display: block;
+    width: fit-content;
+    
+    font-weight: 600;
+    transform: translate(-120%, 0);
+    animation: identifier 20s linear infinite;
+  }
+  .ad_text1{
+    animation-delay: 4s;
+  }
+  .ad_text2{
+    animation-delay: 8s;
+  }
+  .ad_text3{
+    animation-delay: 12s;
+  }
+  .ad_text4{
+    animation-delay: 16s;
+  }
+}
