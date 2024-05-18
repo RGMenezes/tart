@@ -10,7 +10,7 @@ import ProjectCard from '@/components/cards/ProjectCard';
 import TextLink from '@/components/link/TextLink';
 import AdvertisementContainer from '@/components/containers/AdvertisementContainer';
 import ButtonLink from '@/components/link/ButtonLink';
-import { BsArrowRight, BsGraphUpArrow, BsLaptop, BsTools } from 'react-icons/bs';
+import { BsArrowRight, BsGraphUpArrow, BsInstagram, BsLaptop, BsTools } from 'react-icons/bs';
 import Card from '@/components/cards/Card';
 import adText from '@/texts/adText';
 import projectText from '@/texts/projectText';
@@ -19,6 +19,7 @@ import DefaultCard from '@/components/cards/DefaultCard';
 import LogoYS from '@/components/svg/LogoYS';
 import assessmentText from '@/texts/assessmentText';
 import { useEffect, useState } from 'react';
+import SectionLink from '@/components/link/SectionLink';
 
 export default function Home(){
   const [assessmentAnimation, setAssessmentAnimation] = useState(
@@ -36,8 +37,6 @@ export default function Home(){
 
     return () => clearInterval(intervalId);
   }, [assessmentAnimation]);
-
-  console.log(assessmentAnimation);
 
   return(
     <main>
@@ -94,21 +93,21 @@ export default function Home(){
 
         <div className={styles.service_container}>
           <Card>
-            <BsLaptop className={styles.service_icon}/>
+            <BsLaptop className={styles.big_icon}/>
             <h3>{serviceText.rent.title}</h3>
             <p className='p_small'>{serviceText.rent.paragraph}</p>
             <TextLink className={styles.service_link} type='highlight' to='/contato'>{serviceText.rent.cta} <BsArrowRight /></TextLink>
           </Card>
 
           <Card>
-            <BsGraphUpArrow className={styles.service_icon}/>
+            <BsGraphUpArrow className={styles.big_icon}/>
             <h3>{serviceText.analysis.title}</h3>
             <p className='p_small'>{serviceText.analysis.paragraph}</p>
             <TextLink className={styles.service_link} type='highlight' to='/contato'>{serviceText.analysis.cta} <BsArrowRight /></TextLink>
           </Card>
 
           <Card>
-            <BsTools className={styles.service_icon}/>
+            <BsTools className={styles.big_icon}/>
             <h3>{serviceText.others.title}</h3>
             <p className='p_small'>{serviceText.others.paragraph}</p>
             <TextLink className={styles.service_link} type='highlight' to='/contato'>{serviceText.others.cta} <BsArrowRight /></TextLink>
@@ -149,6 +148,13 @@ export default function Home(){
           </DefaultCard>
         </div>
         <ButtonLink type='highlight' to='/contato'>Junte-se agora <BsArrowRight /></ButtonLink>
+      </Section>
+
+      <Section className={styles.social_section}>
+        <SectionLink target='_blank' rel='external' className={styles.social_container} to='https://www.instagram.com/tart_oficial/'>
+          <BsInstagram className={styles.big_icon}/>
+          <h5>@tart_oficial</h5>
+        </SectionLink>
       </Section>
     </main>
   );

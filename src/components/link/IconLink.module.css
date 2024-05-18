@@ -3,13 +3,18 @@
   transition: all .3s ease;
 }
 
+.link:active{
+  transform: translate(3px, 3px);
+  transition: all .1s ease;
+}
+
 @media screen and (min-width: 769px) {
   .link:hover{
     transform: scale(1.1);
   }
-}
 
-.link:active{
-  transform: translate(3px, 3px);
-  transition: all .1s ease;
+  .link:active{
+    transform: scale(1.1) translate(3px, 3px);
+    transition: all .1s ease;
+  }
 }

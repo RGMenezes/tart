@@ -6,6 +6,10 @@
 .icon{
   fill: var(--color-main);
 }
+.big_icon{
+  font-size: 50px;
+  color: var(--color);
+}
 
 .ad_container{
   padding-bottom: 0px !important;
@@ -17,10 +21,6 @@
   flex-flow: row wrap;
   justify-content: center;
   gap: 30px;
-}
-.service_icon{
-  font-size: 50px;
-  color: var(--color);
 }
 .service_link{
   margin-top: auto;
@@ -76,4 +76,14 @@
   opacity: 0;
   
   transform: scale(0);
+}
+
+.social_section{
+  display: flex;
+  flex-flow: row wrap !important;
+  justify-content: center;
+}
+.social_container{
+  min-width: 130px;
+  align-items: center;
 }
