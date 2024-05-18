@@ -15,8 +15,30 @@ import Card from '@/components/cards/Card';
 import adText from '@/texts/adText';
 import projectText from '@/texts/projectText';
 import serviceText from '@/texts/serviceText';
+import DefaultCard from '@/components/cards/DefaultCard';
+import LogoYS from '@/components/svg/LogoYS';
+import assessmentText from '@/texts/assessmentText';
+import { useEffect, useState } from 'react';
 
 export default function Home(){
+  const [assessmentAnimation, setAssessmentAnimation] = useState(
+    ['assessment_default', 'assessment_right', 'assessment_right_right', 'assessment_left_left', 'assessment_left']
+  );
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setAssessmentAnimation(prevState => {
+        let copyAdAnimationArray = [...prevState];
+        let element0 = copyAdAnimationArray.shift();
+        if(element0) copyAdAnimationArray.push(element0);
+        return copyAdAnimationArray;
+      });
+    }, 100 * 60 * 3);
+
+    return () => clearInterval(intervalId);
+  }, [assessmentAnimation]);
+
+  console.log(assessmentAnimation);
+
   return(
     <main>
       <HighlightContainer 
@@ -94,7 +116,38 @@ export default function Home(){
         </div>
       </Section>
 
-      <Section className={styles.assessment_container}>
+      <Section className={styles.assessment_section}>
+        <div className={styles.assessment_container}>
+          <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[0]]}`}>
+            <LogoYS className={styles.assessment_logo}/>
+            <h2>{assessmentText.YakuwariSekai.title}</h2>
+            <p>{assessmentText.YakuwariSekai.paragraph}</p>
+          </DefaultCard>
+
+          <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[1]]}`}>
+            <LogoYS className={styles.assessment_logo}/>
+            <h2>{assessmentText.YakuwariSekai.title}1</h2>
+            <p>{assessmentText.YakuwariSekai.paragraph}</p>
+          </DefaultCard>
+
+          <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[2]]}`}>
+            <LogoYS className={styles.assessment_logo}/>
+            <h2>{assessmentText.YakuwariSekai.title}2</h2>
+            <p>{assessmentText.YakuwariSekai.paragraph}</p>
+          </DefaultCard>
+
+          <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[3]]}`}>
+            <LogoYS className={styles.assessment_logo}/>
+            <h2>{assessmentText.YakuwariSekai.title}3</h2>
+            <p>{assessmentText.YakuwariSekai.paragraph}</p>
+          </DefaultCard>
+
+          <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[4]]}`}>
+            <LogoYS className={styles.assessment_logo}/>
+            <h2>{assessmentText.YakuwariSekai.title}4</h2>
+            <p>{assessmentText.YakuwariSekai.paragraph}</p>
+          </DefaultCard>
+        </div>
         <ButtonLink type='highlight' to='/contato'>Junte-se agora <BsArrowRight /></ButtonLink>
       </Section>
     </main>

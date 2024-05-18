@@ -39,6 +39,10 @@
   transition: all .3s ease;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 h1{
   font-size: 2em;
   font-weight: 700;
