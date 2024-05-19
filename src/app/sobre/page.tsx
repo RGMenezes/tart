@@ -8,8 +8,6 @@ export default function Sobre(){
     <main className={styles.main}>
       <h1>Sobre a TART</h1>
       <Section>
-        <h2>Apenas um teste</h2>
-
         {aboutText.about.map((item, index) => (
           <Article key={`${item.title}_${index}`}>
             <h2>{item.title}</h2>
