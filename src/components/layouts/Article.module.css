@@ -1,0 +1,13 @@
+.article{
+  display: flex;
+  flex-flow: column wrap;
+  gap: 15px;
+}
+
+.article h1{
+  padding-bottom: 10px;
+}
+.article h2,
+.article h3{
+  padding-bottom: 5px;
+}
