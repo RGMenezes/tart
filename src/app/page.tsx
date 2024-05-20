@@ -2,8 +2,6 @@
 
 import styles from './page.module.css';
 import HighlightContainer from '@/components/containers/HighlightContainer';
-import imageYSPortrait from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_portrait.jpg';
-import imageYSLandscap from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_landscap.jpg';
 import imageAd from '@public/assets/tart/home_page.png';
 import Section from '@/components/layouts/Section';
 import ProjectCard from '@/components/cards/ProjectCard';
@@ -42,18 +40,18 @@ export default function Home(){
     <main>
       <HighlightContainer 
         to='/projetos/yakuwariSekai' 
-        imagePortrait={imageYSPortrait} 
-        imageLandscap={imageYSLandscap} 
-        alt='Imagem da home page do projeto yakuwari sekai.'
+        imagePortrait={projectText.yakuwariSekai.imagePortrait[0]} 
+        imageLandscap={projectText.yakuwariSekai.imageLandescap[0]} 
+        alt={projectText.yakuwariSekai.imageAlt}
       />
 
       <Section className={styles.container}>
         <h1>Projetos</h1>
 
         <ProjectCard 
-          imagePortrait={imageYSPortrait}
-          imageLandscap={imageYSLandscap}
-          alt='Imagem do projeto yakuwari sekai.'
+          imagePortrait={projectText.yakuwariSekai.imagePortrait[0]}
+          imageLandscap={projectText.yakuwariSekai.imageLandescap[0]}
+          alt={projectText.yakuwariSekai.imageAlt}
         >
           <h3>{projectText.yakuwariSekai.title}</h3>
           <p className='p_small'>{projectText.yakuwariSekai.paragraph}</p>
@@ -61,9 +59,9 @@ export default function Home(){
         </ProjectCard>
 
         <ProjectCard 
-          imagePortrait={imageYSPortrait}
-          imageLandscap={imageYSLandscap}
-          alt='Imagem do projeto yakuwari sekai.'
+          imagePortrait={projectText.yakuwariSekai.imagePortrait[0]}
+          imageLandscap={projectText.yakuwariSekai.imageLandescap[0]}
+          alt={projectText.yakuwariSekai.imageAlt}
           left={false}
         >
           <h3>{projectText.yakuwariSekai.title}</h3>
@@ -72,9 +70,9 @@ export default function Home(){
         </ProjectCard>
 
         <ProjectCard 
-          imagePortrait={imageYSPortrait}
-          imageLandscap={imageYSLandscap}
-          alt='Imagem do projeto yakuwari sekai.'
+          imagePortrait={projectText.yakuwariSekai.imagePortrait[0]}
+          imageLandscap={projectText.yakuwariSekai.imageLandescap[0]}
+          alt={projectText.yakuwariSekai.imageAlt}
         >
           <h3>{projectText.yakuwariSekai.title}</h3>
           <p className='p_small'>{projectText.yakuwariSekai.paragraph}</p>
