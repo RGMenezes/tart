@@ -16,13 +16,13 @@ export default function MainHeader({theme, setTheme}: {theme: string, setTheme: 
   };
   return(
     <header className={styles.header}>
-      <IconLink to='/sobre'>
+      <IconLink to='/'>
         <Logo className={styles.logo}/>
       </IconLink>
       
       <ul className={styles.list_container}>
         <li>
-          <TextLink type='strong' to='/'>Home</TextLink>
+          <TextLink type='strong' to='/redes_sociais'>Redes sociais</TextLink>
         </li>
         <li>
           <TextLink type='strong' to='/contato'>Contato</TextLink>
