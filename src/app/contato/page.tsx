@@ -5,6 +5,7 @@ import adText from '@/texts/adText';
 import Section from '@/components/layouts/Section';
 import ButtonLink from '@/components/link/ButtonLink';
 import { BsEnvelopeAt, BsInstagram } from 'react-icons/bs';
+import Article from '@/components/layouts/Article';
 
 export default function Contato(){
   return(
@@ -15,12 +16,14 @@ export default function Contato(){
         <p><strong>{adText.contact.paragraph}</strong></p>
       </AdvertisementContainer>
       <Section>
-        <ButtonLink a type='highlight' to='mailto:tart.a.r.contato@gmail.com'>
-          <BsEnvelopeAt /> Mensagem por E-mail
-        </ButtonLink>
-        <ButtonLink rel='external' lang={undefined} target='_blank' type='highlight' to='https://www.instagram.com/tart_oficial/'>
-          <BsInstagram /> Mensagem por Direct
-        </ButtonLink>
+        <Article>
+          <ButtonLink a type='highlight' to='mailto:tart.a.r.contato@gmail.com'>
+            <BsEnvelopeAt /> Mensagem por E-mail
+          </ButtonLink>
+          <ButtonLink rel='external' lang={undefined} target='_blank' type='highlight' to='https://www.instagram.com/tart_oficial/'>
+            <BsInstagram /> Mensagem por Direct
+          </ButtonLink>
+        </Article>
       </Section>
     </main>
   );

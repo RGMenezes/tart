@@ -1,5 +1,4 @@
 .main{
-  max-width: 1000px;
   padding-top: 60px;
   margin: auto;
 }
@@ -9,8 +8,29 @@
   text-align: center;
 }
 
+.content_section{
+  max-width: 1000px;
+}
+
+.assessment_section{
+  align-items: center;
+
+  border-top: 2px solid var(--color);
+}
+.assessment_article{
+  width: 100%;
+  max-width: 500px;
+}
+
 @media screen and (min-width: 769px) {
   .main > h1{
     padding-top: 100px;
+  }
+
+  .assessment_article{
+    align-items: center;
+    gap: 30px !important;
+    
+    text-align: center;
   }
 }
