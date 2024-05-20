@@ -32,5 +32,5 @@
   stroke-width: 5px;
   stroke-dashoffset: 0px;
   stroke-dasharray: 1200px;
-  animation: draw infinite 10s;
+  animation: draw infinite 3s;
 }

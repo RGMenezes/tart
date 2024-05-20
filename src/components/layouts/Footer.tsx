@@ -22,7 +22,7 @@ export default function Footer(){
           <li><TextLink to='/contato'>Contato</TextLink></li>
           <li><TextLink to='/layouts'>Layouts</TextLink></li>
         </ul>
-        <p>E-mail:<br/><TextLink type='strong' to='/midias'>tart.a.r.contato@gmail.com</TextLink></p>
+        <p>E-mail:<br/><TextLink a type='strong' to='mailto:tart.a.r.contato@gmail.com'>tart.a.r.contato@gmail.com</TextLink></p>
         <h5>© TART | 2024</h5>
       </Section>
     </footer>

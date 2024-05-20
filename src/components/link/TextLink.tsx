@@ -1,8 +1,15 @@
 import Link from 'next/link';
 import styles from './TextLink.module.css';
 
-export default function TextLink({to, type, children, className}: {children: React.ReactNode, to: string, type?: 'strong' | 'highlight', className?: string}){
+export default function TextLink(
+  {to, type, children, className, a}: 
+  {children: React.ReactNode, to: string, type?: 'strong' | 'highlight', className?: string, a?: boolean}
+){
   return(
-    <Link hrefLang='pt-br' className={`${styles.link} ${type && styles[type]} ${className}`} href={to}>{children}</Link>
+    <>{a ? 
+      <a hrefLang='pt-br' className={`${styles.link} ${type && styles[type]} ${className}`} href={to}>{children}</a>
+      :
+      <Link hrefLang='pt-br' className={`${styles.link} ${type && styles[type]} ${className}`} href={to}>{children}</Link>
+    }</>
   );
 };
