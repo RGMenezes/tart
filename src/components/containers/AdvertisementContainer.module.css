@@ -22,6 +22,12 @@
   
   align-self: center;
 }
+.image_size_width{
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  max-height: none;
+}
 
 @media screen and (min-width: 769px) {
   .section_container{
@@ -36,5 +42,8 @@
     width: 100%;
     max-width: 460px;
     gap: 60px;
+  }
+  .image_size_width{
+    width: 50%;
   }
 }

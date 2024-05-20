@@ -82,7 +82,7 @@ export default function Home(){
         </ProjectCard>
       </Section>
 
-      <AdvertisementContainer className={styles.ad_container} image={imageAd} alt='Jovem'>
+      <AdvertisementContainer className={styles.ad_container} image={imageAd} alt='Jovem segurando um notebook em pé'>
         <h2>{adText.home.title}</h2>
         <p><strong>{adText.home.paragraph}</strong></p>
         <ButtonLink to='/contato'>{adText.home.cta}<BsArrowRight /></ButtonLink>
