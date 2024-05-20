@@ -39,7 +39,7 @@ export default function Home(){
   return(
     <main>
       <HighlightContainer 
-        to='/projetos/yakuwariSekai' 
+        to={`projetos/${projectText.yakuwariSekai.title}`} 
         imagePortrait={projectText.yakuwariSekai.imagePortrait[0]} 
         imageLandscap={projectText.yakuwariSekai.imageLandescap[0]} 
         alt={projectText.yakuwariSekai.imageAlt}
@@ -55,7 +55,7 @@ export default function Home(){
         >
           <h3>{projectText.yakuwariSekai.title}</h3>
           <p className='p_small'>{projectText.yakuwariSekai.paragraph}</p>
-          <TextLink type='highlight' to='/projetos/yakuwariSekai'>{projectText.yakuwariSekai.cta}</TextLink>
+          <TextLink type='highlight' to={`projetos/${projectText.yakuwariSekai.title}`}>{projectText.yakuwariSekai.cta}</TextLink>
         </ProjectCard>
 
         <ProjectCard 
@@ -66,7 +66,7 @@ export default function Home(){
         >
           <h3>{projectText.yakuwariSekai.title}</h3>
           <p className='p_small'>{projectText.yakuwariSekai.paragraph}</p>
-          <TextLink type='highlight' to='/projetos/yakuwariSekai'>{projectText.yakuwariSekai.cta}</TextLink>
+          <TextLink type='highlight' to={`projetos/${projectText.yakuwariSekai.title}`}>{projectText.yakuwariSekai.cta}</TextLink>
         </ProjectCard>
 
         <ProjectCard 
@@ -76,7 +76,7 @@ export default function Home(){
         >
           <h3>{projectText.yakuwariSekai.title}</h3>
           <p className='p_small'>{projectText.yakuwariSekai.paragraph}</p>
-          <TextLink type='highlight' to='/projetos/yakuwariSekai'>{projectText.yakuwariSekai.cta}</TextLink>
+          <TextLink type='highlight' to={`projetos/${projectText.yakuwariSekai.title}`}>{projectText.yakuwariSekai.cta}</TextLink>
         </ProjectCard>
       </Section>
 
