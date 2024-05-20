@@ -1,0 +1,31 @@
+.main{
+  max-width: 300px;
+  padding: 110px 10px 50px 10px;
+  margin: auto;
+  
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.article_container{
+  width: 100%;
+  align-items: center;
+}
+
+.article_container > h1{
+  text-align: center;
+}
+
+.logo_icon{
+  width: auto;
+  height: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  .main{
+    padding: 160px 10px 100px 10px;
+    gap: 100px;
+  }
+}

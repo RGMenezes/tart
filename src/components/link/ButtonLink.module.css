@@ -23,6 +23,17 @@
   font-weight: 600;
 }
 
+.gradient{
+  background-color: var(--color-main);
+  background-image: var(--color-gradient);
+  color: var(--color);
+}
+
+.full_width{
+  width: 100%;
+  justify-content: center;
+}
+
 .link:active{
   transform: translate(3px, 3px);
   transition: all .1s ease;
