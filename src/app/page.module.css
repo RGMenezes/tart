@@ -16,6 +16,11 @@
   background-image: var(--color-gradient);
 }
 
+.image_link{
+  align-self: self-end;
+  justify-self: self-end;
+}
+
 .service_container{
   display: flex;
   flex-flow: row wrap;

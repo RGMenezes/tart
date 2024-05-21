@@ -6,6 +6,7 @@ import Section from '@/components/layouts/Section';
 import ButtonLink from '@/components/link/ButtonLink';
 import { BsEnvelopeAt, BsInstagram } from 'react-icons/bs';
 import Article from '@/components/layouts/Article';
+import TextLink from '@/components/link/TextLink';
 
 export default function Contato(){
   return(
@@ -14,6 +15,9 @@ export default function Contato(){
       <AdvertisementContainer imageSizeWidth className={styles.ad_container} image={imageAd} alt='Jovem usando um notebook sentado'>
         <h2>{adText.contact.title}</h2>
         <p><strong>{adText.contact.paragraph}</strong></p>
+        <TextLink type='slim' className={styles.image_link} rel='external' lang={undefined} target='_blank' to='https://www.rawpixel.com/'>
+          Image by rawpixel.com
+        </TextLink>
       </AdvertisementContainer>
       <Section>
         <Article>

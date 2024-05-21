@@ -24,6 +24,10 @@
   text-decoration: none;
 }
 
+.slim{
+  font-size: .9em;
+}
+
 .highlight:active{
   color: var(--color);
 }

@@ -13,6 +13,11 @@
   padding-bottom: 0px !important;
 }
 
+.image_link{
+  align-self: self-end;
+  justify-self: self-end;
+}
+
 @media screen and (min-width: 769px) {
   .main > h1{
     padding-top: 100px;

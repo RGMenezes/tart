@@ -84,6 +84,10 @@ export default function Home(){
         <h2>{adText.home.title}</h2>
         <p><strong>{adText.home.paragraph}</strong></p>
         <ButtonLink to='/contato'>{adText.home.cta}<BsArrowRight /></ButtonLink>
+
+        <TextLink type='slim' className={styles.image_link} rel='external' lang={undefined} target='_blank' to='https://www.rawpixel.com/'>
+          Image by rawpixel.com
+        </TextLink>
       </AdvertisementContainer>
 
       <Section className={`${styles.container} ${styles.cotainer_flex_row_center}`}>
