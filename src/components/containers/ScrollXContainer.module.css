@@ -1,0 +1,9 @@
+.container{
+  height: 500px;
+  padding-bottom: 10px;
+
+  overflow: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 30px;
+}

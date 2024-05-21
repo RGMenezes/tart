@@ -10,6 +10,34 @@
 
 .content_section{
   max-width: 1000px;
+  margin: auto;
+
+  text-align: center;
+}
+
+.image{
+  width: auto;
+  height: 100%;
+
+  box-shadow: 0px 0px 10px var(--color-blackS);
+  border-radius: 5px;
+}
+
+.flow_x_around_container{
+  width: 100%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 30px;
+}
+.flow_x_center_container{
+  width: 100%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .assessment_section{
