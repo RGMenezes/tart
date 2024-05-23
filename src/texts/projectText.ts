@@ -1,5 +1,6 @@
 import imageYSPortrait from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_portrait.jpg';
 import imageYSLandscap from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_landscap.jpg';
+import imageYSCover from '@public/assets/yakuwari_sekai/cover_yakuwari_sekai.png';
 import { StaticImageData } from 'next/image';
 
 export interface TypeProject {
@@ -12,6 +13,7 @@ export interface TypeProject {
   site: string;
   imagePortrait: StaticImageData[];
   imageLandescap: StaticImageData[];
+  imageCover: StaticImageData;
   imageAlt: string;
 }
 
@@ -26,6 +28,7 @@ const yakuwariSekai: TypeProject = {
   site: 'https://yakuwarisekai.vercel.app/',
   imagePortrait: [imageYSPortrait],
   imageLandescap: [imageYSLandscap],
+  imageCover: imageYSCover,
   imageAlt: 'Imagem do projeto yakuwari sekai.'
 };
 

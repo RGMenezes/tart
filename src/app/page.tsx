@@ -49,8 +49,7 @@ export default function Home(){
         <h1>Projetos</h1>
 
         <ProjectCard 
-          imagePortrait={projectText.yakuwariSekai.imagePortrait[0]}
-          imageLandscap={projectText.yakuwariSekai.imageLandescap[0]}
+          image={projectText.yakuwariSekai.imageCover}
           alt={projectText.yakuwariSekai.imageAlt}
         >
           <h3>{projectText.yakuwariSekai.title}</h3>
@@ -59,8 +58,7 @@ export default function Home(){
         </ProjectCard>
 
         <ProjectCard 
-          imagePortrait={projectText.yakuwariSekai.imagePortrait[0]}
-          imageLandscap={projectText.yakuwariSekai.imageLandescap[0]}
+          image={projectText.yakuwariSekai.imageCover}
           alt={projectText.yakuwariSekai.imageAlt}
           left={false}
         >
@@ -70,8 +68,7 @@ export default function Home(){
         </ProjectCard>
 
         <ProjectCard 
-          imagePortrait={projectText.yakuwariSekai.imagePortrait[0]}
-          imageLandscap={projectText.yakuwariSekai.imageLandescap[0]}
+          image={projectText.yakuwariSekai.imageCover}
           alt={projectText.yakuwariSekai.imageAlt}
         >
           <h3>{projectText.yakuwariSekai.title}</h3>
