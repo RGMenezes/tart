@@ -124,25 +124,25 @@ export default function Home(){
 
           <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[1]]}`}>
             <LogoYS className={styles.assessment_logo}/>
-            <h2>{assessmentText.YakuwariSekai.title}1</h2>
+            <h2>{assessmentText.YakuwariSekai.title}</h2>
             <p>{assessmentText.YakuwariSekai.paragraph}</p>
           </DefaultCard>
 
           <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[2]]}`}>
             <LogoYS className={styles.assessment_logo}/>
-            <h2>{assessmentText.YakuwariSekai.title}2</h2>
+            <h2>{assessmentText.YakuwariSekai.title}</h2>
             <p>{assessmentText.YakuwariSekai.paragraph}</p>
           </DefaultCard>
 
           <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[3]]}`}>
             <LogoYS className={styles.assessment_logo}/>
-            <h2>{assessmentText.YakuwariSekai.title}3</h2>
+            <h2>{assessmentText.YakuwariSekai.title}</h2>
             <p>{assessmentText.YakuwariSekai.paragraph}</p>
           </DefaultCard>
 
           <DefaultCard className={`${styles.assessment} ${styles[assessmentAnimation[4]]}`}>
             <LogoYS className={styles.assessment_logo}/>
-            <h2>{assessmentText.YakuwariSekai.title}4</h2>
+            <h2>{assessmentText.YakuwariSekai.title}</h2>
             <p>{assessmentText.YakuwariSekai.paragraph}</p>
           </DefaultCard>
         </div>
