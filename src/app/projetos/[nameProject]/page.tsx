@@ -8,6 +8,7 @@ import ScrollXContainer from '@/components/containers/ScrollXContianer';
 import projectText, { TypeProject } from '@/texts/projectText';
 import Image from 'next/image';
 import TextLink from '@/components/link/TextLink';
+import Cookies from '@/components/layouts/Cookies';
 
 export default function Projetos({params: {nameProject}}: {params: {nameProject: string}}){
   const projectName = decodeURIComponent(nameProject);
@@ -15,7 +16,9 @@ export default function Projetos({params: {nameProject}}: {params: {nameProject:
 
   if(projectName === 'yakuwariSekai'){
     project = projectText.yakuwariSekai;
-  }
+  }else if(projectName === 'gestorFinanceiro'){
+    project = projectText.gestorFinanceiro;
+  };
   
   return(
     <main className={styles.main}>

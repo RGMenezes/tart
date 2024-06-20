@@ -18,11 +18,17 @@ import LogoYS from '@/components/svg/LogoYS';
 import assessmentText from '@/texts/assessmentText';
 import { useEffect, useState } from 'react';
 import SectionLink from '@/components/link/SectionLink';
+import Cookies from '@/components/layouts/Cookies';
+import { getCookie } from '@/assets/cookie';
 
 export default function Home(){
   const [assessmentAnimation, setAssessmentAnimation] = useState(
     ['assessment_default', 'assessment_right', 'assessment_right_right', 'assessment_left_left', 'assessment_left']
   );
+  const [mensageCookie, setMensageCookie] = useState('true');
+
+  useEffect(() => {setMensageCookie(getCookie('cookie') ?? '');}, []);
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setAssessmentAnimation(prevState => {
@@ -39,10 +45,10 @@ export default function Home(){
   return(
     <main>
       <HighlightContainer 
-        to={'projetos/yakuwariSekai'} 
-        imagePortrait={projectText.yakuwariSekai.imagePortrait[0]} 
-        imageLandscap={projectText.yakuwariSekai.imageLandescap[0]} 
-        alt={projectText.yakuwariSekai.imageAlt}
+        to={'projetos/gestorFinanceiro'} 
+        imagePortrait={projectText.gestorFinanceiro.imagePortrait[0]} 
+        imageLandscap={projectText.gestorFinanceiro.imageLandescap[0]} 
+        alt={projectText.gestorFinanceiro.imageAlt}
       />
 
       <Section className={styles.container}>
@@ -155,6 +161,8 @@ export default function Home(){
           <h5>@tart_oficial</h5>
         </SectionLink>
       </Section>
+
+      {mensageCookie != 'true' && <Cookies setMensageCookie={setMensageCookie} />}
     </main>
   );
 };

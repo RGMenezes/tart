@@ -7,11 +7,12 @@ import styles from './MainHeader.module.css';
 import IconButton from '../button/IconButton';
 import { BsMoon, BsSun } from 'react-icons/bs';
 import IconLink from '../link/IconLink';
+import { setCookie } from '@/assets/cookie';
 
 export default function MainHeader({theme, setTheme}: {theme: string, setTheme: Dispatch<SetStateAction<string>>}){
   const handleTheme = () => {
     const newTheme = theme === 'theme_black' ? 'theme_white' : 'theme_black';
-    document.cookie = newTheme;
+    setCookie('theme', newTheme, 30);
     setTheme(newTheme);
   };
   return(

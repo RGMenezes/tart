@@ -1,0 +1,38 @@
+.button{
+  cursor: pointer;
+  width: fit-content;
+  padding: 10px 13px;
+
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5px;
+  align-items: center;
+
+  background-color: var(--color);
+  box-shadow: 1px 1px 3px var(--color-blackS);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--color-background);
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.button:active{
+  transform: translate(3px, 3px);
+  transition: all .1s ease;
+}
+
+@media screen and (min-width: 769px) {
+  .button:hover{
+    transform: scale(1.1);
+  }
+  
+  .button:active{
+    transform: scale(1.1) translate(3px, 3px);
+    transition: all .1s ease;
+  }
+}

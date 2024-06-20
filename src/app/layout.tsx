@@ -5,6 +5,7 @@ import './globals.css';
 import styles from './layout.module.css';
 import { useEffect, useState } from 'react';
 import Footer from '@/components/layouts/Footer';
+import { getCookie } from '@/assets/cookie';
 
 export default function RootLayout({
   children,
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const [theme, setTheme] = useState('');
-  useEffect(() => setTheme(typeof document !== 'undefined' && document?.cookie === 'theme_white' ? document.cookie : 'theme_black'), []);
+  useEffect(() => setTheme(getCookie('theme') ?? 'theme_black'), []);
   return (
     <html lang="pt-br">
       <body suppressHydrationWarning={true} className={`${styles.body} ${styles[theme]}`}>
