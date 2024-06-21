@@ -26,8 +26,8 @@ export default function Projetos({params: {nameProject}}: {params: {nameProject:
       
       <Section className={styles.content_section}>
         <ScrollXContainer>
-          {project?.imagePortrait.map((item, index) => <Image className={styles.image} key={`portrait_${index}`} src={item} alt={project.imageAlt}/>)}
-          {project?.imageLandescap.map((item, index) => <Image className={styles.image} key={`landscap_${index}`} src={item} alt={project.imageAlt}/>)}
+          {project?.imagePortrait.map((item, index) => index !== 0 && <Image className={styles.image} key={`portrait_${index}`} src={item} alt={project.imageAlt}/>)}
+          {project?.imageLandescap.map((item, index) => index !== 0 && <Image className={styles.image} key={`landscap_${index}`} src={item} alt={project.imageAlt}/>)}
         </ScrollXContainer>
 
         <Article>

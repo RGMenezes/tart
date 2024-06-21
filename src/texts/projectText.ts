@@ -2,7 +2,19 @@ import imageYSPortrait from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_p
 import imageYSLandscap from '@public/assets/yakuwari_sekai/home_yakuwari_sekai_landscap.jpg';
 import imageYSCover from '@public/assets/yakuwari_sekai/cover_yakuwari_sekai.png';
 import imageGFPortrait from '@public/assets/gestor_financeiro/gestor_financeiro_portrait.png';
+import imageGFPortrait1 from '@public/assets/gestor_financeiro/gestor_financeiro_portrait1.png';
+import imageGFPortrait2 from '@public/assets/gestor_financeiro/gestor_financeiro_portrait2.png';
+import imageGFPortrait3 from '@public/assets/gestor_financeiro/gestor_financeiro_portrait3.png';
+import imageGFPortrait4 from '@public/assets/gestor_financeiro/gestor_financeiro_portrait4.png';
+import imageGFPortrait5 from '@public/assets/gestor_financeiro/gestor_financeiro_portrait5.png';
+import imageGFPortrait6 from '@public/assets/gestor_financeiro/gestor_financeiro_portrait6.png';
 import imageGFLandscap from '@public/assets/gestor_financeiro/gestor_financeiro_landscape.png';
+import imageGFLandscap1 from '@public/assets/gestor_financeiro/gestor_financeiro_landscap1.png';
+import imageGFLandscap2 from '@public/assets/gestor_financeiro/gestor_financeiro_landscap2.png';
+import imageGFLandscap3 from '@public/assets/gestor_financeiro/gestor_financeiro_landscap3.png';
+import imageGFLandscap4 from '@public/assets/gestor_financeiro/gestor_financeiro_landscap4.png';
+import imageGFLandscap5 from '@public/assets/gestor_financeiro/gestor_financeiro_landscap5.png';
+import imageGFLandscap6 from '@public/assets/gestor_financeiro/gestor_financeiro_landscap6.png';
 import { StaticImageData } from 'next/image';
 
 export interface TypeProject {
@@ -34,8 +46,8 @@ O Gestor Financeiro Pessoal é a solução ideal para quem quer ter um controle 
   dev:  [['RGMenezes', 'https://github.com/RGMenezes']],
   repository: undefined,
   site: 'https://gestorfinanceirotart.vercel.app/',
-  imagePortrait: [imageGFPortrait],
-  imageLandescap: [imageGFLandscap],
+  imagePortrait: [imageGFPortrait, imageGFPortrait1, imageGFPortrait2, imageGFPortrait3, imageGFPortrait4, imageGFPortrait5, imageGFPortrait6],
+  imageLandescap: [imageGFLandscap, imageGFLandscap1, imageGFLandscap2, imageGFLandscap3, imageGFLandscap4, imageGFLandscap5, imageGFLandscap6],
   imageCover: imageGFPortrait,
   imageAlt: 'Imagem ilustrativa do projeto Gestor Financeiro.'
 };
