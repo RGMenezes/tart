@@ -23,7 +23,7 @@ export interface TypeProject {
   cta: string;
   description: string;
   dev: [string, string][];
-  repository: undefined;
+  repository?: string;
   site: string;
   imagePortrait: StaticImageData[];
   imageLandescap: StaticImageData[];
@@ -44,7 +44,7 @@ Durante o desenvolvimento do Gestor Financeiro Pessoal, enfrentamos alguns desaf
 O Gestor Financeiro Pessoal é a solução ideal para quem quer ter um controle eficiente de suas finanças. Experimente agora e veja como é fácil manter suas finanças organizadas!
 `,
   dev:  [['RGMenezes', 'https://github.com/RGMenezes']],
-  repository: undefined,
+  repository: 'https://github.com/RGMenezes/gestor_financeiro',
   site: 'https://gestorfinanceirotart.vercel.app/',
   imagePortrait: [imageGFPortrait, imageGFPortrait1, imageGFPortrait2, imageGFPortrait3, imageGFPortrait4, imageGFPortrait5, imageGFPortrait6],
   imageLandescap: [imageGFLandscap, imageGFLandscap1, imageGFLandscap2, imageGFLandscap3, imageGFLandscap4, imageGFLandscap5, imageGFLandscap6],
