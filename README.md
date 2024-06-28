@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TART
 
-## Getting Started
+Bem-vindo ao **TART**, um portfólio criado para apresentar de maneira clara e atraente os projetos e habilidades de Rafael Menezes. Este portfólio foi desenvolvido para oferecer uma experiência de navegação intuitiva e agradável, permitindo que qualquer pessoa, mesmo sem conhecimento técnico, possa explorar os trabalhos realizados.
 
-First, run the development server:
+## Funcionalidades Principais
+- **Exploração de Projetos:** Descubra uma variedade de projetos desenvolvidos com tecnologias modernas.
+- **Informações sobre Habilidades:** Conheça as áreas de atuação e especializações.
+- **Contatos e Redes Sociais:** Formas fáceis de entrar em contato e acompanhar o trabalho do desenvolvedor.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias Utilizadas
+- **Next.js**
+- **TypeScript**
+- **React Icons**
+- **Outras bibliotecas complementares**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalação
+### Pré-requisitos
+- Node.js
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Passo a Passo para Instalação
+1. **Clonar o Repositório:**
+    ```bash
+    git clone https://github.com/RGMenezes/tart.git
+    cd tart
+    ```
+2. **Instalar Dependências:**
+    ```bash
+    npm install
+    ```
+3. **Rodar o Projeto:**
+    ```bash
+    npm run dev
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Uso
+Para explorar o portfólio TART, acesse:
+- **Acesso Local:** `http://localhost:3000`
+- **Acesso Online:** [TART](https://tartoficial.vercel.app)
 
-## Learn More
+## Contribuição
+Contribuições são bem-vindas! Por favor, siga as instruções abaixo:
+1. **Faça um Fork do Repositório**
+2. **Crie uma Branch para sua Feature (`git checkout -b feature/FeatureName`)**
+3. **Faça Commit das suas Modificações (`git commit -m 'Add some FeatureName'`)**
+4. **Envie para o Repositório Remoto (`git push origin feature/FeatureName`)**
+5. **Abra um Pull Request**
 
-To learn more about Next.js, take a look at the following resources:
+### Normas de Codificação
+As normas de codificação estão definidas no arquivo `eslint` do projeto.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Licença
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contato
+- **Rafael Menezes:** [LinkedIn](https://www.linkedin.com/in/rafael-menezes-16b002246/)
+- **Email Pessoal:** faelgmp@gmail.com
+- **Email da TART:** tart.a.r.contato@gmail.com
