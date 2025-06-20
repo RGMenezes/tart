@@ -23,10 +23,10 @@ export default function Projetos({params: {nameProject}}: {params: {nameProject:
             <Section className={styles.content_section}>
                 <WrapperScrollX>
                     {project?.images.portrait.map((item, index) => index !== 0 && 
-            <Image className={styles.image} key={`portrait_${index}`} src={item} alt={project.images.alt}/>
+                        <Image className={styles.image} key={`portrait_${index}`} src={item} alt={project.images.alt}/>
                     )}
                     {project?.images.landscape.map((item, index) => index !== 0 &&
-            <Image className={styles.image} key={`landscap_${index}`} src={item} alt={project.images.alt}/>
+                        <Image className={styles.image} key={`landscap_${index}`} src={item} alt={project.images.alt}/>
                     )}
                 </WrapperScrollX>
 

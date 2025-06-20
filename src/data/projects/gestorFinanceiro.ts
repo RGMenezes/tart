@@ -1,4 +1,5 @@
 import { Project } from "./Project";
+import imageGFCover from "@public/image/projects/gestor_financeiro/gestor_financeiro_cover.png";
 import imageGFPortrait from "@public/image/projects/gestor_financeiro/gestor_financeiro_portrait.png";
 import imageGFPortrait1 from "@public/image/projects/gestor_financeiro/gestor_financeiro_portrait1.png";
 import imageGFPortrait2 from "@public/image/projects/gestor_financeiro/gestor_financeiro_portrait2.png";
@@ -36,7 +37,7 @@ gestorFinenceiro.content = {
 gestorFinenceiro.images = {
     portrait: [imageGFPortrait, imageGFPortrait1, imageGFPortrait2, imageGFPortrait3, imageGFPortrait4, imageGFPortrait5, imageGFPortrait6],
     landscape: [imageGFLandscap, imageGFLandscap1, imageGFLandscap2, imageGFLandscap3, imageGFLandscap4, imageGFLandscap5, imageGFLandscap6],
-    cover: imageGFPortrait,
+    cover: imageGFCover,
     alt: "Imagem ilustrativa do projeto Gestor Financeiro."
 };
 

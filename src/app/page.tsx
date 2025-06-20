@@ -34,7 +34,7 @@ export default function Home(){
                 >
                     <h3>{gestorFinenceiro.title}</h3>
                     <p className='p_small'>{gestorFinenceiro.content.summary}</p>
-                    <LinkInternal type='highlight' href={"projetos/yakuwariSekai"}>{gestorFinenceiro.content.cta}</LinkInternal>
+                    <LinkInternal type='highlight' href={"projetos/gestorFinanceiro"}>{gestorFinenceiro.content.cta}</LinkInternal>
                 </CardProjetc>
             </Section>
 
