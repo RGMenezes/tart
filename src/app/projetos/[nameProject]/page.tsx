@@ -1,63 +1,63 @@
-import Section from '@/components/layouts/Section';
-import styles from './page.module.css';
-import adText from '@/texts/adText';
-import Article from '@/components/layouts/Article';
-import ButtonLink from '@/components/link/ButtonLink';
-import { BsArrowRight, BsFolderSymlink, BsLaptop, BsLink45Deg } from 'react-icons/bs';
-import ScrollXContainer from '@/components/containers/ScrollXContianer';
-import projectText, { TypeProject } from '@/texts/projectText';
-import Image from 'next/image';
-import TextLink from '@/components/link/TextLink';
-import Cookies from '@/components/layouts/Cookies';
+import styles from "./page.module.css";
+import { BsArrowRight, BsFolderSymlink, BsLaptop, BsLink45Deg } from "react-icons/bs";
+import Image from "next/image";
+import { Article, Section } from "@/shared/layout";
+import { WrapperScrollX } from "@/shared/wrapper";
+import Project, { gestorFinenceiro } from "@/data/projects";
+import { LinkExternal, LinkInternalButton } from "@/shared/link";
+import { project as projectAdd } from "@data/showcase";
+
 
 export default function Projetos({params: {nameProject}}: {params: {nameProject: string}}){
-  const projectName = decodeURIComponent(nameProject);
-  let project: TypeProject | undefined;
+    const projectName = decodeURIComponent(nameProject);
+    let project: Project | undefined;
 
-  if(projectName === 'yakuwariSekai'){
-    project = projectText.yakuwariSekai;
-  }else if(projectName === 'gestorFinanceiro'){
-    project = projectText.gestorFinanceiro;
-  };
+    if(projectName === "gestorFinanceiro"){
+        project = gestorFinenceiro;
+    }
   
-  return(
-    <main className={styles.main}>
-      <h1>{project?.title}</h1>
+    return(
+        <main className={styles.main}>
+            <h1>{project?.title}</h1>
       
-      <Section className={styles.content_section}>
-        <ScrollXContainer>
-          {project?.imagePortrait.map((item, index) => index !== 0 && <Image className={styles.image} key={`portrait_${index}`} src={item} alt={project.imageAlt}/>)}
-          {project?.imageLandescap.map((item, index) => index !== 0 && <Image className={styles.image} key={`landscap_${index}`} src={item} alt={project.imageAlt}/>)}
-        </ScrollXContainer>
+            <Section className={styles.content_section}>
+                <WrapperScrollX>
+                    {project?.images.portrait.map((item, index) => index !== 0 && 
+            <Image className={styles.image} key={`portrait_${index}`} src={item} alt={project.images.alt}/>
+                    )}
+                    {project?.images.landscape.map((item, index) => index !== 0 &&
+            <Image className={styles.image} key={`landscap_${index}`} src={item} alt={project.images.alt}/>
+                    )}
+                </WrapperScrollX>
 
-        <Article>
-          {project?.description.split('\n').map((item, index) => <p key={`description_${index}`}>{item}</p>)}
-        </Article>
+                <Article>
+                    {project?.content.description.split("\n").map((item, index) => <p key={`description_${index}`}>{item}</p>)}
+                </Article>
 
-        <div className={styles.flow_x_around_container}>
-          {project?.repository && <TextLink rel='external' lang={undefined} target='_blank' type='highlight' to={project.repository}>
+                <div className={styles.flow_x_around_container}>
+                    {project?.urls.repository && <LinkExternal  target='_blank' type='highlight' href={project.urls.repository}>
             Código fonte <BsFolderSymlink />
-          </TextLink>}
+                    </LinkExternal>}
 
-          {project?.site && <TextLink rel='external' lang={undefined} target='_blank' type='highlight' to={project.site}>
+                    {project?.urls.site && <LinkExternal  target='_blank' type='highlight' href={project.urls.site}>
             Acessar <BsLink45Deg />
-          </TextLink>}
-        </div>
+                    </LinkExternal>}
+                </div>
 
-        <div className={styles.flow_x_center_container}>
-          {project?.dev.map( (item, index) =>  <TextLink key={`dev_${index}`} rel='external' lang={undefined} target='_blank' to={item[1]}>
-            <BsLaptop /> {item[0]}
-          </TextLink>)}
-        </div>
-      </Section>
+                <div className={styles.flow_x_center_container}>
+                    {project?.author.map( (item, index) =>  <LinkExternal key={`dev_${index}`}  target='_blank' href={item[1]}>
+                        <BsLaptop /> {item[0]}
+                    </LinkExternal>)}
+                </div>
+            </Section>
 
-      <Section className={styles.assessment_section}>
-        <Article className={styles.assessment_article}>
-          <h2>{adText.project.title}</h2>
-          <p>{adText.project.paragraph}</p>
-          <ButtonLink type='highlight' to='/contato'>{adText.project.cta} <BsArrowRight /></ButtonLink>
-        </Article>
-      </Section>
-    </main>
-  );
-};
+            <Section className={styles.assessment_section}>
+                <Article className={styles.assessment_article}>
+                    <h2>{projectAdd.title}</h2>
+                    <p>{projectAdd.paragraph}</p>
+                    <LinkInternalButton type='highlight' href='/contato'>{projectAdd.cta} <BsArrowRight /></LinkInternalButton>
+                </Article>
+            </Section>
+        </main>
+    );
+}

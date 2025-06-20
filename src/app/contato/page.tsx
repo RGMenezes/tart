@@ -1,34 +1,34 @@
-import imageAd from '@public/assets/tart/contact_page.png';
-import styles from './page.module.css';
-import AdvertisementContainer from '@/components/containers/AdvertisementContainer';
-import adText from '@/texts/adText';
-import Section from '@/components/layouts/Section';
-import ButtonLink from '@/components/link/ButtonLink';
-import { BsEnvelopeAt, BsInstagram } from 'react-icons/bs';
-import Article from '@/components/layouts/Article';
-import TextLink from '@/components/link/TextLink';
+import imageAd from "@public/image/site/contact_page.png";
+import styles from "./page.module.css";
+import { WrapperAdvertisement } from "@/shared/wrapper";
+import { contact } from "@/data/showcase";
+import { LinkExternal, LinkExternalButton } from "@/shared/link";
+import { Article, Section } from "@/shared/layout";
+import { BsEnvelopeAt, BsInstagram } from "react-icons/bs";
 
 export default function Contato(){
-  return(
-    <main className={styles.main}>
-      <h1>Contato</h1>
-      <AdvertisementContainer imageSizeWidth className={styles.ad_container} image={imageAd} alt='Jovem usando um notebook sentado'>
-        <h2>{adText.contact.title}</h2>
-        <p><strong>{adText.contact.paragraph}</strong></p>
-        <TextLink type='slim' className={styles.image_link} rel='external' lang={undefined} target='_blank' to='https://www.rawpixel.com/'>
+    return(
+        <main className={styles.main}>
+            <h1>Contato</h1>
+
+            <WrapperAdvertisement imageSizeWidth className={styles.ad_container} image={imageAd} alt='Jovem usando um notebook sentado'>
+                <h2>{contact.title}</h2>
+                <p><strong>{contact.paragraph}</strong></p>
+                <LinkExternal type='slim' className={styles.image_link} lang={undefined} target='_blank' href='https://www.rawpixel.com/'>
           Image by rawpixel.com
-        </TextLink>
-      </AdvertisementContainer>
-      <Section>
-        <Article>
-          <ButtonLink a type='highlight' to='mailto:tart.a.r.contato@gmail.com'>
-            <BsEnvelopeAt /> Mensagem por E-mail
-          </ButtonLink>
-          <ButtonLink rel='external' lang={undefined} target='_blank' type='highlight' to='https://www.instagram.com/tart_oficial/'>
-            <BsInstagram /> Mensagem por Direct
-          </ButtonLink>
-        </Article>
-      </Section>
-    </main>
-  );
-};
+                </LinkExternal>
+            </WrapperAdvertisement>
+
+            <Section>
+                <Article>
+                    <LinkExternalButton type='highlight' rel='noopener' href='mailto:tart.a.r.contato@gmail.com'>
+                        <BsEnvelopeAt /> Mensagem por E-mail
+                    </LinkExternalButton>
+                    <LinkExternalButton lang={undefined} target='_blank' type='highlight' href='https://www.instagram.com/tart_oficial/'>
+                        <BsInstagram /> Mensagem por Direct
+                    </LinkExternalButton>
+                </Article>
+            </Section>
+        </main>
+    );
+}

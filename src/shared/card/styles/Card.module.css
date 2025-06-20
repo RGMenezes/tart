@@ -1,0 +1,22 @@
+.article{
+  width: 280px;
+  min-height: 100%;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+
+  background-color: var(--color-whiteT);
+  box-shadow: 0px 0px 10px var(--color-blackS);
+  border-radius: 5px;
+
+}
+
+.default{
+  width: 280px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
