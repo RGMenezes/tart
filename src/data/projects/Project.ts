@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
-
-type TAuthor = [string, string][];
+import { Author } from "../team/Author";
 
 interface IImages {
     portrait: StaticImageData[];
@@ -23,7 +22,7 @@ interface IProject {
     content?: IContent;
     images?: IImages;
     urls?: Iurls;
-    author: TAuthor;
+    author: Author[];
 }
 
 export class Project implements IProject {
@@ -31,9 +30,9 @@ export class Project implements IProject {
     private _content?: IContent;
     private _images?: IImages;
     private _urls?: Iurls;
-    author: TAuthor;
+    author: Author[];
 
-    constructor(title: string, author: TAuthor){
+    constructor(title: string, author: Author[]){
         this.title = title;
         this.author = author;
     }

@@ -11,7 +11,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-    const [theme, setTheme] = useState("");
+    const [theme, setTheme] = useState("theme_black");
     useEffect(() => setTheme(getCookie("theme") ?? "theme_black"), []);
     return (
         <html lang="pt-br">

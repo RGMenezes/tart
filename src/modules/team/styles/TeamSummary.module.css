@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-flow: row wrap !important;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+    border-top: 2px solid var(--color);
+}
+
+.teamCard { 
+    max-width: 300px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+}
+
+.wrapperProfile{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.summary{
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 5px; 
+}

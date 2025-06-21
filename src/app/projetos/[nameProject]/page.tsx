@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Article, Section } from "@/shared/layout";
 import { WrapperScrollX } from "@/shared/wrapper";
 import Project, { gestorFinenceiro } from "@/data/projects";
-import { LinkExternal, LinkInternalButton } from "@/shared/link";
+import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { project as projectAdd } from "@data/showcase";
 
 
@@ -45,9 +45,9 @@ export default function Projetos({params: {nameProject}}: {params: {nameProject:
                 </div>
 
                 <div className={styles.flow_x_center_container}>
-                    {project?.author.map( (item, index) =>  <LinkExternal key={`dev_${index}`}  target='_blank' href={item[1]}>
-                        <BsLaptop /> {item[0]}
-                    </LinkExternal>)}
+                    {project?.author.map( (author, index) =>  <LinkInternal key={`author_${index}`} href={`/time/${author.name}`}>
+                        <BsLaptop /> {author.name}
+                    </LinkInternal>)}
                 </div>
             </Section>
 

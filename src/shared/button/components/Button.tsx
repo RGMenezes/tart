@@ -1,5 +1,5 @@
 import { IButtonProps } from "../types/Button.types";
-import styles from "../styles/ButtonIcon.module.css";
+import styles from "../styles/Button.module.css";
 
 export default function Button(props: IButtonProps){
     return(

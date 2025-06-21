@@ -14,8 +14,9 @@ import imageGFLandscap3 from "@public/image/projects/gestor_financeiro/gestor_fi
 import imageGFLandscap4 from "@public/image/projects/gestor_financeiro/gestor_financeiro_landscap4.png";
 import imageGFLandscap5 from "@public/image/projects/gestor_financeiro/gestor_financeiro_landscap5.png";
 import imageGFLandscap6 from "@public/image/projects/gestor_financeiro/gestor_financeiro_landscap6.png";
+import { rgmenezes } from "../team";
 
-const gestorFinenceiro = new Project("Gestor Financeiro", [["RGMenezes", "https://github.com/RGMenezes"]]);
+const gestorFinenceiro = new Project("Gestor Financeiro", [rgmenezes]);
 
 gestorFinenceiro.content = {
     summary: 

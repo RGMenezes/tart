@@ -21,15 +21,15 @@ export default function Header({theme, setTheme}: {theme: string, setTheme: Disp
             </LinkInternalIcon>
       
             <ul className={styles.list_container}>
-                <li>
+                {/* <li>
                     <LinkInternal type='strong' href='/redes_sociais'>Redes sociais</LinkInternal>
-                </li>
+                </li> */}
                 <li>
                     <LinkInternal type='strong' href='/contato'>Contato</LinkInternal>
                 </li>
                 {/* <li>
-          <LinkInternal type='strong' href='/projetos'>Projetos</LinkInternal>
-        </li> */}
+                    <LinkInternal type='strong' href='/projetos'>Projetos</LinkInternal>
+                </li> */}
             </ul>
 
             <ButtonIcon onClick={handleTheme}>

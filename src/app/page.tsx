@@ -11,11 +11,17 @@ import { gestorFinenceiro } from "@/data/projects";
 import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { lending } from "@/data/showcase";
 import { BsArrowRight, BsGraphUpArrow, BsLaptop, BsTools } from "react-icons/bs";
+import { TeamSummary } from "@/modules/team";
 
 export default function Home(){
-    const [mensageCookie, setMensageCookie] = useState("true");
-    useEffect(() => {setMensageCookie(getCookie("cookie") ?? "");}, []);
+    const [mensageCookie, setMensageCookie] = useState("false");
+    const [client, setClient] = useState(false);
+    useEffect(() => {
+        if(client) setMensageCookie(getCookie("cookie") ?? "true");
+        else setClient(true);
+    }, [getCookie("cookie")]);
 
+    console.log(mensageCookie);
     return(
         <main>
             <WrapperHighlight 
@@ -75,7 +81,9 @@ export default function Home(){
                 </div>
             </Section>
 
-            {mensageCookie != "true" && <CookiesBoxAlert setMensageCookie={setMensageCookie} />}
+            <TeamSummary />
+
+            {mensageCookie != "true" && <CookiesBoxAlert />}
         </main>
     );
 }
