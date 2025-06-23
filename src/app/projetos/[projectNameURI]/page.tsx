@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./page.module.css";
 import { BsArrowRight, BsFolderSymlink, BsLaptop, BsLink45Deg } from "react-icons/bs";
 import Image from "next/image";
