@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./page.module.css";
 import { BsArrowRight, BsFolderSymlink, BsLaptop, BsLink45Deg } from "react-icons/bs";
 import Image from "next/image";
@@ -10,8 +8,8 @@ import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { project as projectAdd } from "@data/showcase";
 
 
-export default function Projetos({params}: {params: {projectNameURI: string}}){
-    const projectName = decodeURIComponent(params.projectNameURI);
+export default function Projetos({ params }: { params: any }){
+    const projectName = decodeURIComponent(params.projectNameURI as string);
     let project: Project | undefined;
 
     if(projectName === "gestorFinanceiro"){
