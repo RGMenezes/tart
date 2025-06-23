@@ -8,8 +8,8 @@ import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { project as projectAdd } from "@data/showcase";
 
 
-export default function Projetos({params: {nameProject}}: {params: {nameProject: string}}){
-    const projectName = decodeURIComponent(nameProject);
+export default function Projetos({params: {projectNameURI}}: {params: {projectNameURI: string}}){
+    const projectName = decodeURIComponent(projectNameURI);
     let project: Project | undefined;
 
     if(projectName === "gestorFinanceiro"){

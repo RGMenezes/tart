@@ -2,26 +2,16 @@
 
 import styles from "./page.module.css";
 import imageAd from "@public/image/site/home_page.png";
-import { useEffect, useState } from "react";
-import { getCookie } from "@/utils/cookie";
 import { WrapperAdvertisement, WrapperHighlight } from "@/shared/wrapper";
-import { CookiesBoxAlert, Section } from "@/shared/layout";
+import { Section } from "@/shared/layout";
 import { Card, CardProjetc } from "@/shared/card";
 import { gestorFinenceiro } from "@/data/projects";
 import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { lending } from "@/data/showcase";
-import { BsArrowRight, BsGraphUpArrow, BsLaptop, BsTools } from "react-icons/bs";
+import { BsArrowRight, BsChatDots, BsCodeSlash, BsTools } from "react-icons/bs";
 import { TeamSummary } from "@/modules/team";
 
 export default function Home(){
-    const [mensageCookie, setMensageCookie] = useState("false");
-    const [client, setClient] = useState(false);
-    useEffect(() => {
-        if(client) setMensageCookie(getCookie("cookie") ?? "true");
-        else setClient(true);
-    }, [getCookie("cookie")]);
-
-    console.log(mensageCookie);
     return(
         <main>
             <WrapperHighlight 
@@ -59,31 +49,29 @@ export default function Home(){
 
                 <div className={styles.service_container}>
                     <Card>
-                        <BsLaptop className={styles.big_icon}/>
-                        <h3>{lending.rent.title}</h3>
-                        <p className='p_small'>{lending.rent.paragraph}</p>
-                        <LinkInternal className={styles.service_link} type='highlight' href='/contato'>{lending.rent.cta} <BsArrowRight /></LinkInternal>
+                        <BsCodeSlash className={styles.big_icon}/>
+                        <h3>{lending.card1.title}</h3>
+                        <p className='p_small'>{lending.card1.paragraph}</p>
+                        <LinkInternal className={styles.service_link} type='highlight' href='/contato'>{lending.card1.cta} <BsArrowRight /></LinkInternal>
                     </Card>
 
                     <Card>
-                        <BsGraphUpArrow className={styles.big_icon}/>
-                        <h3>{lending.analysis.title}</h3>
-                        <p className='p_small'>{lending.analysis.paragraph}</p>
-                        <LinkInternal className={styles.service_link} type='highlight' href='/contato'>{lending.analysis.cta} <BsArrowRight /></LinkInternal>
+                        <BsChatDots className={styles.big_icon}/>
+                        <h3>{lending.card2.title}</h3>
+                        <p className='p_small'>{lending.card2.paragraph}</p>
+                        <LinkInternal className={styles.service_link} type='highlight' href='/contato'>{lending.card2.cta} <BsArrowRight /></LinkInternal>
                     </Card>
 
                     <Card>
                         <BsTools className={styles.big_icon}/>
-                        <h3>{lending.others.title}</h3>
-                        <p className='p_small'>{lending.others.paragraph}</p>
-                        <LinkInternal className={styles.service_link} type='highlight' href='/contato'>{lending.others.cta} <BsArrowRight /></LinkInternal>
+                        <h3>{lending.card3.title}</h3>
+                        <p className='p_small'>{lending.card3.paragraph}</p>
+                        <LinkInternal className={styles.service_link} type='highlight' href='/contato'>{lending.card3.cta} <BsArrowRight /></LinkInternal>
                     </Card>
                 </div>
             </Section>
 
             <TeamSummary />
-
-            {mensageCookie != "true" && <CookiesBoxAlert />}
         </main>
     );
 }

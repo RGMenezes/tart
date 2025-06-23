@@ -1,20 +1,22 @@
 import Showcase from "./Showcase";
 
 const lending = {
-    rent: new Showcase(
-        "Aluguel de Sites:",
-        "Transforme sua visão em realidade digital sem complicações. Com nosso serviço de aluguel de sites, você obtém um site sob medida para o seu negócio por um seu sucesso online.",
-        "Construa agora"
+    card1: new Showcase(
+        "Equipe de Desenvolvedores:",
+        "Somos uma equipe apaixonada por transformar ideias em soluções digitais sob medida. De sites modernos a sistemas complexos, entregamos qualidade, inovação e comprometimento em cada linha de código.",
+        "Conheça nosso time"
     ),
-    analysis: new Showcase(
-        "Análise e Teste:",
-        "Descubra o potencial do seu negócio com nossa análise personalizada gratuita. Entendemos que cada jornada digital é única, por isso oferecemos uma semana de teste gratuito para que você possa experimentar seu site antes de comprometer-se totalmente. Estamos aqui para ajudá-lo a alcançar o sucesso online que você merece.",
-        "Descubra já"
+    
+    card2: new Showcase(
+        "Consultoria e Propostas:",
+        "Tem um projeto em mente? Nós ouvimos, analisamos e propomos a melhor solução para você. Entre em contato e receba uma consultoria gratuita — queremos entender sua necessidade e construir algo incrível juntos.",
+        "Fale conosco"
     ),
-    others: new Showcase(
-        "Outros Serviços:",
-        "Deixe-nos ser o arquiteto do seu sucesso digital. Além do aluguel de sites, oferecemos uma gama de serviços personalizados, desde a criação de sites deslumbrantes até o desenvolvimento de soluções digitais avançadas como APIs e sistemas. Deixe-nos criar a ponte entre sua visão e o mundo online.",
-        "Explore aqui"
+    
+    card3: new Showcase(
+        "Soluções Personalizadas:",
+        "Desenvolvemos aplicações web, APIs, sistemas administrativos e muito mais, sob medida para seu negócio. Cada projeto é único, assim como cada solução que entregamos.",
+        "Veja o que fazemos"
     ),
     add: new Showcase(
         "Desperte Novas Possibilidades!",

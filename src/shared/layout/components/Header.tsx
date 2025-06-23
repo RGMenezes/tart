@@ -1,19 +1,12 @@
 "use client";
 
 import styles from "../styles/Header.module.css";
-import { Dispatch, SetStateAction } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
-import { setCookie } from "@/utils/cookie";
 import { LinkInternal, LinkInternalIcon } from "@/shared/link";
 import { Logo } from "@/shared/icon";
 import { ButtonIcon } from "@/shared/button";
 
-export default function Header({theme, setTheme}: {theme: string, setTheme: Dispatch<SetStateAction<string>>}){
-    const handleTheme = () => {
-        const newTheme = theme === "theme_black" ? "theme_white" : "theme_black";
-        setCookie("theme", newTheme, 30);
-        setTheme(newTheme);
-    };
+export default function  Header({theme, onClick}: {theme: boolean, onClick: () => void}){
     return(
         <header className={styles.header}>
             <LinkInternalIcon href='/'>
@@ -32,12 +25,8 @@ export default function Header({theme, setTheme}: {theme: string, setTheme: Disp
                 </li> */}
             </ul>
 
-            <ButtonIcon onClick={handleTheme}>
-                {theme === "theme_black" ? 
-                    <BsSun className={styles.icon}/>
-                    :
-                    <BsMoon className={styles.icon}/>
-                }
+            <ButtonIcon onClick={onClick}>
+                {theme ? <BsSun className={styles.icon}/> : <BsMoon className={styles.icon}/>}
             </ButtonIcon>
         </header>
     );
