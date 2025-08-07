@@ -7,9 +7,15 @@ import Project, { gestorFinenceiro } from "@/data/projects";
 import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { project as projectAdd } from "@data/showcase";
 
+type TProjetosProps = {
+  params: {
+    projectNameURI: string;
+  };
+};
 
-export default function Projetos({ params }: { params: any }){
-    const projectName = decodeURIComponent(params.projectNameURI as string);
+
+export default function Projetos({ params }: TProjetosProps){
+    const projectName = decodeURIComponent(params.projectNameURI);
     let project: Project | undefined;
 
     if(projectName === "gestorFinanceiro"){

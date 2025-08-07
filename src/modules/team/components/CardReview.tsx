@@ -9,13 +9,13 @@ import { BsPersonFill, BsStarFill } from "react-icons/bs";
 
 export default function CardReview({ author }: ICardReview){
     const [indexReview, setIndexReview] = useState(0);
-    const [review, setReview] = useState(author.reviews[indexReview] ?? undefined);
+    const [review, setReview] = useState(author?.reviews[indexReview] ?? undefined);
     const [comment, setComment] = useState<string | boolean>("");
 
     useEffect(() => {
         (async () => {
             let animatedText = "";
-            for await (const char of animationWordWrite(review?.comment ?? "", 50)) {
+            for await (const char of animationWordWrite(review.comment ?? "", 50)) {
                 animatedText += char;
                 if(animatedText == review.comment) setComment(false);
                 else setComment(animatedText);
@@ -34,7 +34,7 @@ export default function CardReview({ author }: ICardReview){
       
             return () => clearTimeout(timer);
         }
-    }, [comment]);
+    }, [comment, author.reviews, indexReview]);
 
     return(
         <Card className={styles.wrapperReview}>
