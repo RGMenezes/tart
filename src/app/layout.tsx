@@ -42,6 +42,7 @@ export default function RootLayout({
                 <meta name="keywords" content="TART, soluções digitais, portfólio de sites, sistemas personalizados, desenvolvimento web, design digital, aluguel de sites" />
                 <meta name="author" content="TART" />
                 <meta name="robots" content="index, follow" />
+                <meta name="google-site-verification" content="VbY6inD0kiGTxvEjGnOg6NenCwbxMvgKIwpms4PhWPk" />
 
                 <meta property="og:title" content="Portfólio TART — Soluções Digitais Personalizadas" />
                 <meta property="og:description" content="Conheça os projetos da TART: sites e sistemas desenvolvidos com foco em identidade, performance e funcionalidade." />
