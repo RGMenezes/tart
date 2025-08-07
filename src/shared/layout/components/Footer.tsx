@@ -7,11 +7,11 @@ export default function Footer(){
     return(
         <footer>
             <section className={styles.ad_section}>
-                <p className={`${styles.ad_text} ${styles.ad_text0}`}>TypeScript</p>
-                <p className={`${styles.ad_text} ${styles.ad_text1}`}>MongoDb</p>
-                <p className={`${styles.ad_text} ${styles.ad_text2}`}>JavaScript</p>
-                <p className={`${styles.ad_text} ${styles.ad_text3}`}>Design</p>
-                <p className={`${styles.ad_text} ${styles.ad_text4}`}>Postgres</p>
+                <p className={`${styles.ad_text} ${styles.ad_text0}`}>Versatilidade</p>
+                <p className={`${styles.ad_text} ${styles.ad_text1}`}>Criatividade</p>
+                <p className={`${styles.ad_text} ${styles.ad_text2}`}>Tecnologia</p>
+                <p className={`${styles.ad_text} ${styles.ad_text3}`}>Autenticidade</p>
+                <p className={`${styles.ad_text} ${styles.ad_text4}`}>Conexão</p>
             </section>
 
             <Section className={styles.content_container}>
@@ -23,7 +23,7 @@ export default function Footer(){
                     {/* <li><LinkInternal href='/projetos'>Projetos</LinkInternal></li> */}
                 </ul>
                 <p>E-mail:<br/><LinkExternal type='strong' href='mailto:tart.a.r.contato@gmail.com'>tart.a.r.contato@gmail.com</LinkExternal></p>
-                <h5>© TART | 2024</h5>
+                <h5>© TART | {new Date().getFullYear()}</h5>
             </Section>
         </footer>
     );

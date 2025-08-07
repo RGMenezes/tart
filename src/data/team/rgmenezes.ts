@@ -1,4 +1,4 @@
-import imageProfile from "@public/image/team/rgmenezes/image_profile.jpg";
+import imageProfile from "@public/image/team/rgmenezes/image_profile.jpeg";
 import { Author } from "./Author";
 
 const rgmenezes = new Author(
