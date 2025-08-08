@@ -8,14 +8,12 @@ import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { project as projectAdd } from "@data/showcase";
 
 type TProjetosProps = {
-  params: {
-    projectNameURI: string;
-  };
+    params: Promise<{ projectNameURI: string }>;
 };
 
-
-export default function Projetos({ params }: TProjetosProps){
-    const projectName = decodeURIComponent(params.projectNameURI);
+export default async function Projetos({ params }: TProjetosProps){
+    const { projectNameURI } = await params;
+    const projectName = decodeURIComponent(projectNameURI);
     let project: Project | undefined;
 
     if(projectName === "gestorFinanceiro"){
