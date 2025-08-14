@@ -3,7 +3,7 @@ import { BsArrowRight, BsFolderSymlink, BsLaptop, BsLink45Deg } from "react-icon
 import Image from "next/image";
 import { Article, Section } from "@/shared/layout";
 import { WrapperScrollX } from "@/shared/wrapper";
-import Project, { gestorFinenceiro } from "@/data/projects";
+import Project, { gestorFinenceiro, trainingTimer, vee } from "@/data/projects";
 import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { project as projectAdd } from "@data/showcase";
 
@@ -16,8 +16,21 @@ export default async function Projetos({ params }: TProjetosProps){
     const projectName = decodeURIComponent(projectNameURI);
     let project: Project | undefined;
 
-    if(projectName === "gestorFinanceiro"){
+    switch (projectName) {
+    case "gestorFinanceiro":
         project = gestorFinenceiro;
+        break;
+
+    case "vee":
+        project = vee;
+        break;
+    
+    case "trainingTimer":
+        project = trainingTimer;
+        break;
+    
+    default:
+        break;
     }
   
     return(
@@ -40,11 +53,11 @@ export default async function Projetos({ params }: TProjetosProps){
 
                 <div className={styles.flow_x_around_container}>
                     {project?.urls.repository && <LinkExternal  target='_blank' type='highlight' href={project.urls.repository}>
-            Código fonte <BsFolderSymlink />
+                        Código fonte <BsFolderSymlink />
                     </LinkExternal>}
 
                     {project?.urls.site && <LinkExternal  target='_blank' type='highlight' href={project.urls.site}>
-            Acessar <BsLink45Deg />
+                        Acessar <BsLink45Deg />
                     </LinkExternal>}
                 </div>
 

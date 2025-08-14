@@ -5,7 +5,7 @@ import imageAd from "@public/image/site/home_page.png";
 import { WrapperAdvertisement, WrapperHighlight } from "@/shared/wrapper";
 import { Section } from "@/shared/layout";
 import { Card, CardProjetc } from "@/shared/card";
-import { gestorFinenceiro } from "@/data/projects";
+import { gestorFinenceiro, trainingTimer, vee } from "@/data/projects";
 import { LinkExternal, LinkInternal, LinkInternalButton } from "@/shared/link";
 import { lending } from "@/data/showcase";
 import { BsArrowRight, BsChatDots, BsCodeSlash, BsTools } from "react-icons/bs";
@@ -32,6 +32,25 @@ export default function Home(){
                     <p className='p_small'>{gestorFinenceiro.content.summary}</p>
                     <LinkInternal type='highlight' href={"projetos/gestorFinanceiro"}>{gestorFinenceiro.content.cta}</LinkInternal>
                 </CardProjetc>
+
+                <CardProjetc 
+                    image={vee.images.cover}
+                    alt={vee.images.alt}
+                    left
+                >
+                    <h3>{vee.title}</h3>
+                    <p className='p_small'>{vee.content.summary}</p>
+                    <LinkInternal type='highlight' href={"projetos/vee"}>{vee.content.cta}</LinkInternal>
+                </CardProjetc>
+
+                <CardProjetc 
+                    image={trainingTimer.images.cover}
+                    alt={trainingTimer.images.alt}
+                >
+                    <h3>{trainingTimer.title}</h3>
+                    <p className='p_small'>{trainingTimer.content.summary}</p>
+                    <LinkInternal type='highlight' href={"projetos/trainingTimer"}>{trainingTimer.content.cta}</LinkInternal>
+                </CardProjetc>
             </Section>
 
             <WrapperAdvertisement className={styles.ad_container} image={imageAd} alt='Jovem segurando um notebook em pé'>
@@ -40,7 +59,7 @@ export default function Home(){
                 <LinkInternalButton href='/contato'>{lending.add.cta}<BsArrowRight /></LinkInternalButton>
 
                 <LinkExternal type='slim' className={styles.image_link}  lang={undefined} target='_blank' href='https://www.rawpixel.com/'>
-          Image by rawpixel.com
+                    Image by rawpixel.com
                 </LinkExternal>
             </WrapperAdvertisement>
 
