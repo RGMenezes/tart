@@ -14,17 +14,17 @@ const vee = new Project("VEE", [rgmenezes]);
 
 vee.content = {
     summary: 
-    "A VEE é uma plataforma de criação de sites e sistemas que oferece soluções rápidas e profissionais para empreendedores digitais, tornando seu negócio online mais eficiente e acessível.",
-  
+    "A VEE é um espaço de estudo, reflexão e crescimento espiritual, oferecendo conteúdos que fortalecem a fé e incentivam aprendizado contínuo da Palavra.",
+
     cta: 
-    "Conhecer a VEE +",
-  
+    "Explorar a VEE +",
+
     description: 
-    `A VEE é um projeto da TART desenvolvido para ajudar empreendedores a terem presença digital de forma rápida e eficiente. Com a VEE, você pode criar sites e sistemas personalizados, garantindo que seu negócio esteja online com qualidade e sem complicações.\n
-    A plataforma foi criada para ser intuitiva, responsiva e segura, permitindo que você gerencie seus projetos digitais com facilidade, tanto em computadores quanto em dispositivos móveis.\n
-    Entre as principais funcionalidades da VEE estão: templates prontos e personalizáveis, sistemas sob medida de acordo com a necessidade do cliente, integração com ferramentas digitais e um painel de controle simples para gerenciar seu site ou sistema.\n
-    Durante o desenvolvimento da VEE, enfrentamos desafios como unir rapidez, design moderno e funcionalidade robusta. Todos foram superados para oferecer uma solução confiável e prática para empreendedores.\n
-    A VEE é ideal para quem deseja lançar seu negócio online de maneira profissional e ágil. Experimente a VEE e transforme suas ideias em sites e sistemas de qualidade com facilidade!`
+    `A VEE é um projeto que nasceu para ajudar pessoas a aprofundarem sua fé e fortalecerem sua conexão com Deus. Com a VEE, você encontra estudos, reflexões e recursos que facilitam o aprendizado da Palavra e promovem crescimento pessoal e espiritual.\n
+    O projeto foi desenvolvido para ser acessível, intuitivo e inspirador, permitindo que cada usuário explore conteúdos no seu próprio ritmo, tanto individualmente quanto em grupo.\n
+    Entre os principais recursos da VEE estão: trilhas de estudos guiadas, biblioteca de materiais devocionais, múltiplas versões da Bíblia, versículos do dia e espaços de reflexão e comunidade.\n
+    Durante o desenvolvimento, buscamos criar uma experiência que una profundidade, clareza e facilidade de uso, garantindo que cada visitante possa crescer na fé de forma significativa.\n
+    A VEE é ideal para quem deseja estudar a Palavra de maneira prática, reflexiva e engajadora. Descubra a VEE e transforme seu aprendizado espiritual em uma experiência concreta e pessoal!`
 };
 
 vee.images = {
